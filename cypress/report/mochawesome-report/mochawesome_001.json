@@ -1,0 +1,91 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-03-17T12:01:32.368Z",
+    "end": "2023-03-17T12:01:32.761Z",
+    "duration": 393,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "fe13ed0b-28bb-45b2-8a2a-0976cd74092e",
+      "title": "",
+      "fullFile": "cypress/e2e/FirstTest.cy.js",
+      "file": "cypress/e2e/FirstTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "My site should be able to search",
+          "fullTitle": "My site should be able to search",
+          "timedOut": null,
+          "duration": 164,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit(\"https://google.com\");\ncy.get('.gLFyf').type(\"Automation step by step\");\ncy.wait(2000);\ncy.contains('Google Search').click();\n//another way:\n//cy.get('.gLFyf').type(\"Automation step by step {enter}\")\n//to add timeout \n// cy.get('.gLFyf', {timeout:5000}).type(\"Automation step by step {Enter}\")",
+          "err": {
+            "message": "TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from https://localhost:undefined/eyes/batchEnd\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.",
+            "estack": "TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from https://localhost:undefined/eyes/batchEnd\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at send (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/makeSend.js:10:0)\n    at sendRequest (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/sendRequest.js:5:0)\n    at eval (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/commands.js:16:0)\n    at doPoll (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/poll.js:4:0)\n    at Context.eval (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/commands.js:33:0)",
+            "diff": null
+          },
+          "uuid": "82d5d605-6402-4973-83dd-3cfa253524c1",
+          "parentUUID": "fe13ed0b-28bb-45b2-8a2a-0976cd74092e",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "82d5d605-6402-4973-83dd-3cfa253524c1"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 164,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

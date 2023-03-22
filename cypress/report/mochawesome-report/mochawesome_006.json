@@ -1,0 +1,170 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 0,
+    "passes": 0,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-03-17T12:01:45.581Z",
+    "end": "2023-03-17T12:01:45.958Z",
+    "duration": 377,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 2,
+    "hasOther": true,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "76b7ddb0-5230-4fe9-b99f-c67d90ed3e92",
+      "title": "",
+      "fullFile": "cypress/e2e/todomvList.cy.js",
+      "file": "cypress/e2e/todomvList.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "should add items in my todo lits",
+          "fullTitle": "should add items in my todo lits",
+          "timedOut": null,
+          "duration": 0,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('http://todomvc-app-for-testing.surge.sh/');\ncy.get('.new-todo').type('Clean Room {Enter}');\ncy.get('.toggle').click();\ncy.contains('Clear').click();",
+          "err": {
+            "message": "TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from https://localhost:undefined/eyes/batchEnd\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.",
+            "estack": "TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from https://localhost:undefined/eyes/batchEnd\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at send (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/makeSend.js:10:0)\n    at sendRequest (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/sendRequest.js:5:0)\n    at eval (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/commands.js:16:0)\n    at doPoll (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/poll.js:4:0)\n    at Context.eval (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/commands.js:33:0)",
+            "diff": null
+          },
+          "uuid": "2f6e8201-db53-48eb-939e-817e933cd061",
+          "parentUUID": "76b7ddb0-5230-4fe9-b99f-c67d90ed3e92",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "should add items in my todo lits",
+          "fullTitle": "should add items in my todo lits",
+          "timedOut": null,
+          "duration": 0,
+          "state": "skipped",
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "cy.visit('http://todomvc-app-for-testing.surge.sh/');\ncy.get('.new-todo').type('Clean Room {Enter}');\ncy.get('label').should('have.text', 'Clean Room');\ncy.get('toggle').should('not.be.checked');\ncy.get('.toggle').click();\ncy.get('toggle').should('be.checked');\ncy.get('label').should('have.css', 'text-decoration-line', 'line-through');\ncy.contains('Clear').click();\ncy.get('label').should('not.have.text', 'Clean Room');\n//More precice way for Checking that a list has no items:\ncy.get(selector).should('not.have.descendants', 'li');",
+          "err": {},
+          "uuid": "211f1724-44e2-4371-96c4-a970462abd76",
+          "parentUUID": "76b7ddb0-5230-4fe9-b99f-c67d90ed3e92",
+          "isHook": false,
+          "skipped": true
+        }
+      ],
+      "suites": [
+        {
+          "uuid": "eb48302e-3400-4b47-a290-00286af035b3",
+          "title": "should test the todo list",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should add items to do list",
+              "fullTitle": "should test the todo list should add items to do list",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.new-todo').type('Clean Room {Enter}');\ncy.get('.new-todo').type('Cook Lunch {Enter}');\ncy.get('.new-todo').type('Learn JS {Enter}');\ncy.get('.todo-list').should('have.length', 3);",
+              "err": {},
+              "uuid": "933a45df-bf44-469a-9b38-48d19ee7c918",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "should strike the work completed",
+              "fullTitle": "should test the todo list should strike the work completed",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get('.todo-list li:nth-child(2) .toggle').click();\ncy.get('.todo-list li:nth-child(2) .toggle').should('be.checked');",
+              "err": {},
+              "uuid": "7957d11c-6969-4b9d-bc0f-da398eddf5f4",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [
+            "933a45df-bf44-469a-9b38-48d19ee7c918",
+            "7957d11c-6969-4b9d-bc0f-da398eddf5f4"
+          ],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [
+        "2f6e8201-db53-48eb-939e-817e933cd061"
+      ],
+      "pending": [],
+      "skipped": [
+        "211f1724-44e2-4371-96c4-a970462abd76"
+      ],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

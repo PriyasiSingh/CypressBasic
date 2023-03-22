@@ -1,0 +1,110 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-03-17T12:01:40.367Z",
+    "end": "2023-03-17T12:01:40.774Z",
+    "duration": 407,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "272e873a-e7e8-42ba-a9dd-2a806dffc4c2",
+      "title": "",
+      "fullFile": "cypress/e2e/VisualTestPractice.cy.js",
+      "file": "cypress/e2e/VisualTestPractice.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "42ef3ba9-bafd-441f-97d4-b08a75619cf2",
+          "title": "Visual validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "user should be able to login",
+              "fullTitle": "Visual validation user should be able to login",
+              "timedOut": null,
+              "duration": 165,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.eyesCheckWindow('Default Login screen');\nconst loginPage = new _LoginPage.LoginPage();\nloginPage.enterUsername('Admin');\nloginPage.enterPassword('admin123');\nloginPage.clickLogin();\ncy.eyesCheckWindow('Default Login screen');",
+              "err": {
+                "message": "TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from https://localhost:undefined/eyes/batchEnd\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.",
+                "estack": "TypeError: Failed to execute 'fetch' on 'Window': Failed to parse URL from https://localhost:undefined/eyes/batchEnd\n\nBecause this error occurred during a `after all` hook we are skipping all of the remaining tests.\n    at send (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/makeSend.js:10:0)\n    at sendRequest (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/sendRequest.js:5:0)\n    at eval (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/commands.js:16:0)\n    at doPoll (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/poll.js:4:0)\n    at Context.eval (webpack:///./node_modules/@applitools/eyes-cypress/src/browser/commands.js:33:0)",
+                "diff": null
+              },
+              "uuid": "8fe01671-4711-414d-9593-0aedfbcc2075",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8fe01671-4711-414d-9593-0aedfbcc2075"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 165,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
